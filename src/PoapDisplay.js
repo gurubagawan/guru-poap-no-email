@@ -6,19 +6,20 @@ export const PoapDisplay = ({ poaps }) => (<div className="poap-container">
         <a href={`https://poap.gallery/drop/${poap.drop_id}`} target="_blank" rel="noopener noreferrer">
           <img src={`${poap.drop.image_url}?size=small`} alt={poap.id} className="poap-image" />
         </a>
-        <div>
-          <p>Name: </p>
+        <div style={{ marginTop: '10px' }}>
           <b>
             {poap.drop.name}
           </b>
 
-          <p>
-            Id:
+          <p style={{ marginTop: '10px' }}>
+            Id:&nbsp;
             <b>
               {poap.id}
             </b>
           </p>
-          <p>Drop ID: {poap.drop_id}</p>
+          <p>Drop ID:&nbsp;
+            <b>{poap.drop_id}</b>
+          </p>
         </div>
       </div>
     ))}
