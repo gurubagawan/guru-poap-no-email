@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container{
+.container {
   padding-top: 20px;
 }
 
@@ -39,18 +39,22 @@ body {
 
 .error {
   color: red;
-  margin-top: 10px;
 }
 
-.poap-container{
+.poap-container {
   margin-top: 20px
 }
-.poap-details{
+
+.poap-details {
   padding: 10px;
 }
 
-.poap-details:hover{
+.poap-details:hover {
   background-color: #5cb6e3;
   border-radius: 20px;
   color: whitesmoke
+}
+
+.margin-ten {
+  margin-top: 10px;
 }

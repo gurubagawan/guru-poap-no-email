@@ -106,7 +106,7 @@ function App() {
       </form>
 
       {loading && <p>Loading...</p>}
-      {error && <p className="error">{error}</p>}
+      {error && <p className="error margin-ten">{error}</p>}
       <div className="container">
         {poaps.length > 0 && <PoapDisplay poaps={poaps} />}
       </div>
