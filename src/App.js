@@ -25,8 +25,6 @@ function App() {
   }
 
   const fetchPOAPs = async (address) => {
-    console.log(address)
-    
     try {
       const response = await fetch(process.env.REACT_APP_API_URL, {
         method: 'POST',
@@ -53,7 +51,6 @@ function App() {
         }),
       });
       const result = await response.json();
-      console.log(result)
       if (result.data.poaps.length === 0) {
         setError('No POAPs found for this identifier');
       }
