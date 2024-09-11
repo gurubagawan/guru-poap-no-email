@@ -9,6 +9,7 @@ function App() {
   const [poaps, setPoaps] = useState([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const apiUrl = process.env.REACT_APP_API_URL
 
   const resolveENS = async (searchTerm) => {
     let address 
@@ -26,7 +27,7 @@ function App() {
 
   const fetchPOAPs = async (address) => {
     try {
-      const response = await fetch(process.env.REACT_APP_API_URL, {
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
