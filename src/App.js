@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { ethers } from "ethers";
 import { PoapDisplay } from './PoapDisplay';
 
-const emailToEnsMapping = []
-
 const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${process.env.REACT_APP_INVURA_KEY}`);
 
 function App() {
@@ -14,19 +12,7 @@ function App() {
 
   const resolveENS = async (searchTerm) => {
     let address 
-    if (searchTerm.includes('@')) {
-      const ens = emailToEnsMapping[identifier] || null;
-      if (address) {
-        address = await provider.resolveName(ens);
-        if (!address) {
-          setError('Invalid ENS');
-          return
-        }
-      } else {
-        setError('No ENS name found for this email');
-        return
-      }
-    } else if (searchTerm.endsWith('.eth')) {
+    if (searchTerm.endsWith('.eth')) {
       address = await provider.resolveName(searchTerm);
       if (!address) {
         setError('Invalid ENS')
@@ -81,7 +67,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (identifier.trim() === '') {
-      setError('Please enter a valid identifier (address, ENS, or email)');
+      setError('Please enter a valid identifier (address or ENS)');
       return;
     }
     setLoading(true);
@@ -114,7 +100,7 @@ function App() {
           type="text"
           value={identifier}
           onChange={(e) => setIdentifier(e.target.value)}
-          placeholder="Address, ENS, or email"
+          placeholder="Address or ENS"
           className="input"
         />
         <button type="submit" className="button">Search</button>

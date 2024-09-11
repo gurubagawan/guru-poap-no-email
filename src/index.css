@@ -50,6 +50,7 @@ body {
 }
 
 .poap-details:hover{
-  background-color: #ccc;
+  background-color: #5cb6e3;
   border-radius: 20px;
+  color: whitesmoke
 }
