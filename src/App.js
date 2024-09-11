@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ethers } from "ethers";
 import { PoapDisplay } from './PoapDisplay';
 
-const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${process.env.REACT_APP_INVURA_KEY}`);
+const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`);
 
 function App() {
   const [identifier, setIdentifier] = useState('');
