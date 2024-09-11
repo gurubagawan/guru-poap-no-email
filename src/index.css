@@ -12,14 +12,14 @@ body {
 }
 
 .input {
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .button {
-  padding: 10px;
+  padding: 5px;
   margin: 5px;
   border: none;
   border-radius: 4px;
